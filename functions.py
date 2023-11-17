@@ -5,13 +5,13 @@ def meal_time(timestring):
   minutes = int(minutes)
 
   if hours >= 7 and hours <= 8:
-    return "Breakfast time"
+    return "Breakfast"
   elif hours >= 12 and hours <= 13:
-    return "Lunch time"
+    return "Lunch"
   elif hours >= 18 and hours <= 19:
-    return "Dinner time"
+    return "Dinner"
   else:
-    return "No meal time currently."
+    return "No meal currently."
 
 print("07:00 =>", meal_time("07:30"))
 print("18:00 =>", meal_time("18:30"))
@@ -40,7 +40,13 @@ def is_image_file(filename):
   file = file
   extension = extension
 
-  if extension == "jpg" and extension == "jpeg" and extension == "png" and extension == "gif":
+  if extension == "jpg":
+    return True 
+  elif extension == "jpeg":
+    return True
+  elif extension == "png":
+    return True
+  elif extension == "gif":
     return True
   elif extension == "tiff":
     return True
